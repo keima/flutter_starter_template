@@ -1,0 +1,14 @@
+targets:
+  $default:
+    builders:
+      slang_build_runner:
+        options:
+          # https://github.com/Tienisto/slang#configuration
+          base_locale: ja
+          input_directory: assets/i18n
+          input_file_pattern: .i18n.yaml
+          output_directory: lib/i18n
+          output_file_name: translations.g.dart
+          output_format: multiple_files
+          translation_class_visibility: public
+          fallback_strategy: base_locale

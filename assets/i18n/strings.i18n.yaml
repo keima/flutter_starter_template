@@ -1,0 +1,9 @@
+general:
+  appName: フラッタースターターテンプレート
+  helloWorld: こんにちは世界！
+pages:
+  main:
+    bottomItemLabel:
+      home: ホーム
+      menu: メニュー
+      about: このアプリについて

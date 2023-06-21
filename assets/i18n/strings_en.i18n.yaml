@@ -1,0 +1,9 @@
+general:
+  appName: Flutter Starter Template
+  helloWorld: "Hello, World!"
+pages:
+  main:
+    bottomItemLabel:
+      home: Home
+      menu: Menu
+      about: About

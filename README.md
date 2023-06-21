@@ -14,3 +14,18 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+## Using libraries
+
+### Localization
+
+[Tienisto/slang: Type\-safe i18n for Flutter](https://github.com/Tienisto/slang)
+
+- generate translations dart files
+  - `make gen-i18n`
+  - `fvm flutter pub run slang`
+- analyze missing translation
+  - `fvm flutter pub run slang analyze`
+  - `fvm flutter pub run slang analyze --full` also checks unused translation
+
+More cli tool subcommand is [here](https://github.com/Tienisto/slang#tools).
