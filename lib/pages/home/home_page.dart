@@ -14,6 +14,7 @@ class MyHomePage extends HookConsumerWidget {
     final counter = useState(0);
 
     final String value = ref.watch(helloProvider);
+    final helloAsync = ref.watch(helloAsyncProvider);
 
     return Scaffold(
       appBar: AppBar(
@@ -34,6 +35,13 @@ class MyHomePage extends HookConsumerWidget {
             Text(
               value,
               style: Theme.of(context).textTheme.headlineSmall,
+            ),
+            helloAsync.maybeWhen(
+              data: (data) => Text(
+                data,
+                style: Theme.of(context).textTheme.headlineSmall,
+              ),
+              orElse: () => const CircularProgressIndicator(),
             ),
           ],
         ),

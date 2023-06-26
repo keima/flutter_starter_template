@@ -20,4 +20,18 @@ final helloProvider = AutoDisposeProvider<String>.internal(
 );
 
 typedef HelloRef = AutoDisposeProviderRef<String>;
+String _$helloAsyncHash() => r'99fa5dd3877a187be6eda8132c162d5e99d3cf19';
+
+/// See also [helloAsync].
+@ProviderFor(helloAsync)
+final helloAsyncProvider = AutoDisposeFutureProvider<String>.internal(
+  helloAsync,
+  name: r'helloAsyncProvider',
+  debugGetCreateSourceHash:
+      const bool.fromEnvironment('dart.vm.product') ? null : _$helloAsyncHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef HelloAsyncRef = AutoDisposeFutureProviderRef<String>;
 // ignore_for_file: unnecessary_raw_strings, subtype_of_sealed_class, invalid_use_of_internal_member, do_not_use_environment, prefer_const_constructors, public_member_api_docs, avoid_private_typedef_functions
