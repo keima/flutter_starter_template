@@ -26,6 +26,10 @@ dependencies:
   hooks_riverpod: ^2.3.6
   riverpod_annotation: ^2.1.1
 
+  # freezed
+  freezed_annotation: ^2.2.0
+  json_annotation: ^4.8.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -39,6 +43,10 @@ dev_dependencies:
   custom_lint: ^0.4.0
   riverpod_generator: ^2.2.3
   riverpod_lint: ^1.3.2
+
+  # freezed
+  json_serializable: ^6.7.0
+  freezed: ^2.3.5
 
 flutter:
   # The following line ensures that the Material Icons font is
