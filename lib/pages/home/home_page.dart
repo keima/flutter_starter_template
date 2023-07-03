@@ -2,15 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../hello_provider.dart';
+import '/hello_provider.dart';
+import '/i18n/translations.g.dart';
 
-class MyHomePage extends HookConsumerWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
+class HomePage extends HookConsumerWidget {
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final t = Translations.of(context);
+
     final counter = useState(0);
 
     final String value = ref.watch(helloProvider);
@@ -19,7 +20,7 @@ class MyHomePage extends HookConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(title),
+        title: Text(t.general.appName),
       ),
       body: Center(
         child: Column(

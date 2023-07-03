@@ -30,6 +30,9 @@ dependencies:
   freezed_annotation: ^2.2.0
   json_annotation: ^4.8.1
 
+  # routing
+  go_router: ^8.2.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -47,6 +50,10 @@ dev_dependencies:
   # freezed
   json_serializable: ^6.7.0
   freezed: ^2.3.5
+
+  # routing
+  # TODO: builder is disabled due to StatefulShellRoute unavailable
+  # go_router_builder: ^1.1.7
 
 flutter:
   # The following line ensures that the Material Icons font is
