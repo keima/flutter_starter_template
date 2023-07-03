@@ -68,6 +68,6 @@ class TranslationsPagesMainBottomItemLabelJa {
 
 	// Translations
 	String get home => 'ホーム';
-	String get menu => 'メニュー';
-	String get about => 'このアプリについて';
+	String get map => 'マップ';
+	String get about => '概要';
 }

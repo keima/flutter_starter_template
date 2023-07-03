@@ -5,5 +5,5 @@ pages:
   main:
     bottomItemLabel:
       home: ホーム
-      menu: メニュー
-      about: このアプリについて
+      map: マップ
+      about: 概要

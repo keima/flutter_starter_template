@@ -4,6 +4,10 @@ init:
 	fvm flutter pub get
 	fvm flutter pub run build_runner build
 
+.PHONY: build
+build:
+	fvm flutter pub run build_runner build
+
 .PHONY: watch
 watch:
 	fvm flutter pub run build_runner watch

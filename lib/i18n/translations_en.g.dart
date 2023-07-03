@@ -70,6 +70,6 @@ class TranslationsPagesMainBottomItemLabelEn extends TranslationsPagesMainBottom
 
 	// Translations
 	@override String get home => 'Home';
-	@override String get menu => 'Menu';
+	@override String get map => 'Map';
 	@override String get about => 'About';
 }

@@ -9,8 +9,8 @@ extension on TranslationsJa {
 			case 'general.appName': return 'フラッタースターターテンプレート';
 			case 'general.helloWorld': return 'こんにちは世界！';
 			case 'pages.main.bottomItemLabel.home': return 'ホーム';
-			case 'pages.main.bottomItemLabel.menu': return 'メニュー';
-			case 'pages.main.bottomItemLabel.about': return 'このアプリについて';
+			case 'pages.main.bottomItemLabel.map': return 'マップ';
+			case 'pages.main.bottomItemLabel.about': return '概要';
 			default: return null;
 		}
 	}
@@ -22,7 +22,7 @@ extension on TranslationsEn {
 			case 'general.appName': return 'Flutter Starter Template';
 			case 'general.helloWorld': return 'Hello, World!';
 			case 'pages.main.bottomItemLabel.home': return 'Home';
-			case 'pages.main.bottomItemLabel.menu': return 'Menu';
+			case 'pages.main.bottomItemLabel.map': return 'Map';
 			case 'pages.main.bottomItemLabel.about': return 'About';
 			default: return null;
 		}

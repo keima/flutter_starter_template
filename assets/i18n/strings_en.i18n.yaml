@@ -5,5 +5,5 @@ pages:
   main:
     bottomItemLabel:
       home: Home
-      menu: Menu
+      map: Map
       about: About
