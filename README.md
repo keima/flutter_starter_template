@@ -17,12 +17,32 @@ samples, guidance on mobile development, and a full API reference.
 
 ## Using libraries
 
+### Routing (deep linking)
+
+[go_router | Flutter Package](https://pub.dev/packages/go_router)
+
+TODO: Due to lack of StatefulShellRoute support, `go_router_builder` is not activated yet.
+
+- generate type-defined routing file
+  - `make build`
+- watch file changed and build
+  - `make watch`
+
+### immutable class builder
+
+[freezed \| Dart Package](https://pub.dev/packages/freezed)
+
+- generate type-defined routing file
+  - `make build`
+- watch file changed and build
+  - `make watch`
+
 ### Localization
 
 [Tienisto/slang: Type\-safe i18n for Flutter](https://github.com/Tienisto/slang)
 
 - generate translations dart files
-  - `make gen-i18n`
+  - `make gen-i18n` or `make build`
   - `fvm flutter pub run slang`
 - analyze missing translation
   - `fvm flutter pub run slang analyze`
