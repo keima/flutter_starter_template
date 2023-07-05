@@ -8,6 +8,10 @@ init:
 build:
 	fvm flutter pub run build_runner build
 
+.PHONY: force-build
+force-build:
+	fvm flutter pub run build_runner build --delete-conflicting-outputs
+
 .PHONY: watch
 watch:
 	fvm flutter pub run build_runner watch
