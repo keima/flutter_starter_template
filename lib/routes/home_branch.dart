@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '/pages/home/home_page.dart';
 import 'package:go_router/go_router.dart';
 
 import '/pages/noop_page.dart';
@@ -11,7 +12,7 @@ final homeBranch = StatefulShellBranch(
     GoRoute(
       path: '/home',
       pageBuilder: (context, state) => const NoTransitionPage(
-        child: NoopPage(text: "home_branch"),
+        child: HomePage(),
       ),
     ),
   ],
