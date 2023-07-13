@@ -12,3 +12,4 @@ targets:
           output_format: multiple_files
           translation_class_visibility: public
           fallback_strategy: base_locale
+          timestamp: false
