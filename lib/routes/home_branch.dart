@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import '/pages/home/home_page.dart';
 import 'package:go_router/go_router.dart';
 
-import '/pages/noop_page.dart';
+import '/pages/home/home_page.dart';
 
 final _navigatorKey = GlobalKey<NavigatorState>();
 

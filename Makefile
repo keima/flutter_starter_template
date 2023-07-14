@@ -1,8 +1,8 @@
+BUILD_NUMBER?=1
 
 .PHONY: init
-init:
+init: dart-define-init force-build
 	fvm flutter pub get
-	fvm flutter pub run build_runner build
 
 .PHONY: build
 build:
@@ -16,30 +16,38 @@ force-build:
 watch:
 	fvm flutter pub run build_runner watch
 
-.PHONY: run
-run:
-	fvm flutter run
+.PHONY: run-dev
+run-dev:
+	fvm flutter run --flavor dev --dart-define-from-file=env.dev.json
 
-# .PHONY: run-dev
-# run-dev:
-# 	fvm flutter run --flavor dev --dart-define=FLAVOR=dev
+.PHONY: run-stg
+run-stg:
+	fvm flutter run --flavor stg --dart-define-from-file=env.stg.json
 
-# .PHONY: run-stg
-# run-stg:
-# 	fvm flutter run --flavor stg --dart-define=FLAVOR=stg
+.PHONY: run-prod
+run-prod:
+	fvm flutter run --flavor prod --dart-define-from-file=env.prod.json
 
-# .PHONY: run-prod
-# run-prod:
-# 	fvm flutter run --flavor prod --dart-define=FLAVOR=prod
-
-# .PHONY: build-aab-stg
-# build-aab-stg:
-# 	fvm flutter build appbundle --debug --flavor stg --dart-define=FLAVOR=stg --build-number=${BUILD_NUMBER}
+# .PHONY: build-aab
+# build-aab:
+# 	fvm flutter build appbundle --debug --flavor prod --dart-define-from-file=env.prod.json --build-number=${BUILD_NUMBER}
 
 .PHONY: gen-i18n
 gen-i18n:
 	fvm flutter pub run slang
 
+.PHONY: dart-define-init
+dart-define-init:
+	fvm flutter pub run dart_define generate --no-json
+
 .PHONY: foobar
-foobar:
-	@echo "foobar"
+foobar: foo bar
+	@echo "> foobar"
+
+.PHONY: foo
+foo:
+	@echo "> foo"
+
+.PHONY: bar
+bar:
+	@echo "> bar"

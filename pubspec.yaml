@@ -59,6 +59,9 @@ dev_dependencies:
   # coding assistant
   flutter_gen_runner: ^5.3.1
 
+  # env management
+  dart_define: ^2.0.1
+
 flutter:
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
@@ -103,3 +106,26 @@ flutter_gen:
   # colors:
   #   inputs:
   #     - assets/color/colors.xml
+
+dart_define:
+  json: false
+  variables:
+    - name: KEY1
+      description: Key1
+      default: key1.fallback
+      required: false
+    - name: KEY2
+      description: Key2
+      default: key2.fallback
+      required: false
+    - name: FLAVOR
+      description: flavor
+      default: dev
+      required: false
+  flavors:
+    - name: prod
+      description: Production environment
+    - name: stg
+      description: Staging environment
+    - name: dev
+      description: Development environment
