@@ -41,7 +41,7 @@ dart-define-init:
 	fvm flutter pub run dart_define generate --no-json
 
 .PHONY: foobar
-foobar: foo bar
+foobar: foo bar baz
 	@echo "> foobar"
 
 .PHONY: foo
@@ -51,3 +51,7 @@ foo:
 .PHONY: bar
 bar:
 	@echo "> bar"
+
+.PHONY: baz
+baz:
+	@echo "> ${USER}"

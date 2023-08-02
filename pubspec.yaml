@@ -56,7 +56,7 @@ dev_dependencies:
   # TODO: builder is disabled due to StatefulShellRoute unavailable
   # go_router_builder: ^1.1.7
 
-  # coding assistant
+  # resource management
   flutter_gen_runner: ^5.3.1
 
   # env management
