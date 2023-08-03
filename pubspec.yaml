@@ -62,6 +62,10 @@ dev_dependencies:
   # env management
   dart_define: ^2.0.1
 
+  # persistent storage
+  shared_preferences: ^2.2.0
+  flutter_secure_storage: ^8.0.0
+
 flutter:
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
