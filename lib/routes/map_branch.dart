@@ -5,31 +5,17 @@ import '/pages/noop_page.dart';
 
 const mapTypedStatefulShellBranch = TypedStatefulShellBranch(
   routes: <TypedRoute<RouteData>>[
-    TypedGoRoute<MapPageRouteData>(path: "/maps"),
+    TypedGoRoute<MapsPageRouteData>(path: "/maps"),
   ],
 );
 
-class MapPageRouteData extends GoRouteData {
-  const MapPageRouteData();
+class MapsPageRouteData extends GoRouteData {
+  const MapsPageRouteData();
 
   @override
   Page<void> buildPage(BuildContext context, GoRouterState state) {
     return const NoTransitionPage(
-      child: NoopPage(text: "map_branch"),
+      child: NoopPage(text: "maps_branch"),
     );
   }
 }
-
-// final _navigatorKey = GlobalKey<NavigatorState>();
-
-// final mapBranch = StatefulShellBranch(
-//   navigatorKey: _navigatorKey,
-//   routes: [
-//     GoRoute(
-//       path: '/maps',
-//       pageBuilder: (context, state) => const NoTransitionPage(
-//         child: NoopPage(text: "map_branch"),
-//       ),
-//     ),
-//   ],
-// );

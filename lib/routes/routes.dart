@@ -14,19 +14,6 @@ final goRouter = GoRouter(
   initialLocation: "/home",
   navigatorKey: _rootNavigatorKey,
   routes: $appRoutes,
-  // [
-  //   StatefulShellRoute.indexedStack(
-  //     builder: (context, state, navigationShell) => ScaffoldWithNestedNavigation(
-  //       navigationShell: navigationShell,
-  //     ),
-  //     // NOTE: must sync tab_navigation.dart items
-  //     branches: [
-  //       homeBranch,
-  //       mapBranch,
-  //       aboutBranch,
-  //     ],
-  //   ),
-  // ],
 );
 
 @TypedStatefulShellRoute<MainShellRouteData>(

@@ -19,17 +19,3 @@ class AboutPageRouteData extends GoRouteData {
     );
   }
 }
-
-// final _navigatorKey = GlobalKey<NavigatorState>();
-
-// final aboutBranch = StatefulShellBranch(
-//   navigatorKey: _navigatorKey,
-//   routes: [
-//     GoRoute(
-//       path: '/about',
-//       pageBuilder: (context, state) => const NoTransitionPage(
-//         child: NoopPage(text: "about_branch"),
-//       ),
-//     ),
-//   ],
-// );

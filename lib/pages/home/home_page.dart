@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:flutter_starter_template/dart_define.gen.dart';
-import 'package:flutter_starter_template/gen/assets.gen.dart';
-import 'package:flutter_starter_template/routes/about_branch.dart';
-import 'package:flutter_starter_template/routes/routes.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+import '/routes/routes.dart';
+import '/routes/about_branch.dart';
 import '/hello_provider.dart';
 import '/i18n/translations.g.dart';
+import '/dart_define.gen.dart';
+import '/gen/assets.gen.dart';
 
 class HomePage extends HookConsumerWidget {
   const HomePage({super.key});

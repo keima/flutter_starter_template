@@ -19,17 +19,3 @@ class HomePageRouteData extends GoRouteData {
     );
   }
 }
-
-// final _navigatorKey = GlobalKey<NavigatorState>();
-
-// final homeBranch = StatefulShellBranch(
-//   navigatorKey: _navigatorKey,
-//   routes: [
-//     GoRoute(
-//       path: '/home',
-//       pageBuilder: (context, state) => const NoTransitionPage(
-//         child: HomePage(),
-//       ),
-//     ),
-//   ],
-// );
