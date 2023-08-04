@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_starter_template/dart_define.gen.dart';
 import 'package:flutter_starter_template/gen/assets.gen.dart';
+import 'package:flutter_starter_template/routes/about_branch.dart';
+import 'package:flutter_starter_template/routes/routes.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '/hello_provider.dart';
@@ -40,7 +42,17 @@ class HomePage extends HookConsumerWidget {
               value,
               style: Theme.of(context).textTheme.headlineSmall,
             ),
-            Image.asset(Assets.images.dash.path),
+            Image.asset(
+              Assets.images.dash.path,
+              width: 100,
+              height: 100,
+            ),
+            TextButton(
+              child: const Text("go to /about"),
+              onPressed: () {
+                const AboutPageRouteData().go(context);
+              },
+            ),
             helloAsync.maybeWhen(
               data: (data) => Text(
                 data,

@@ -3,16 +3,33 @@ import 'package:go_router/go_router.dart';
 
 import '/pages/noop_page.dart';
 
-final _navigatorKey = GlobalKey<NavigatorState>();
-
-final aboutBranch = StatefulShellBranch(
-  navigatorKey: _navigatorKey,
-  routes: [
-    GoRoute(
-      path: '/about',
-      pageBuilder: (context, state) => const NoTransitionPage(
-        child: NoopPage(text: "about_branch"),
-      ),
-    ),
+const aboutTypedStatefulShellBranch = TypedStatefulShellBranch(
+  routes: <TypedRoute<RouteData>>[
+    TypedGoRoute<AboutPageRouteData>(path: "/about"),
   ],
 );
+
+class AboutPageRouteData extends GoRouteData {
+  const AboutPageRouteData();
+
+  @override
+  Page<void> buildPage(BuildContext context, GoRouterState state) {
+    return const NoTransitionPage(
+      child: NoopPage(text: "about_branch"),
+    );
+  }
+}
+
+// final _navigatorKey = GlobalKey<NavigatorState>();
+
+// final aboutBranch = StatefulShellBranch(
+//   navigatorKey: _navigatorKey,
+//   routes: [
+//     GoRoute(
+//       path: '/about',
+//       pageBuilder: (context, state) => const NoTransitionPage(
+//         child: NoopPage(text: "about_branch"),
+//       ),
+//     ),
+//   ],
+// );
