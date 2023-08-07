@@ -1,13 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:flutter_starter_template/routes/routes.dart';
+import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '/routes/routes.dart';
-import '/routes/about_branch.dart';
+import '../about/about_page.dart';
 import '/hello_provider.dart';
 import '/i18n/translations.g.dart';
 import '/dart_define.gen.dart';
 import '/gen/assets.gen.dart';
+
+class HomePageRouteData extends GoRouteData {
+  const HomePageRouteData();
+
+  @override
+  Page<void> buildPage(BuildContext context, GoRouterState state) {
+    return const NoTransitionPage(
+      child: HomePage(),
+    );
+  }
+}
 
 class HomePage extends HookConsumerWidget {
   const HomePage({super.key});
@@ -29,7 +41,7 @@ class HomePage extends HookConsumerWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
+          children: [
             Text("${DartDefine.flavor} ${DartDefine.key1} ${DartDefine.key2}"),
             const Text(
               'You have pushed the button this many times:',
@@ -50,7 +62,7 @@ class HomePage extends HookConsumerWidget {
             TextButton(
               child: const Text("go to /about"),
               onPressed: () {
-                const AboutPageRouteData().go(context);
+                const AboutPageRoute().go(context);
               },
             ),
             helloAsync.maybeWhen(

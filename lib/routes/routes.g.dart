@@ -17,6 +17,7 @@ RouteBase get $mainShellRouteData => StatefulShellRouteData.$route(
           routes: [
             GoRouteData.$route(
               path: '/home',
+              name: 'home',
               factory: $HomePageRouteDataExtension._fromState,
             ),
           ],
@@ -25,7 +26,7 @@ RouteBase get $mainShellRouteData => StatefulShellRouteData.$route(
           routes: [
             GoRouteData.$route(
               path: '/maps',
-              factory: $MapsPageRouteDataExtension._fromState,
+              factory: $MapsPageRouteExtension._fromState,
             ),
           ],
         ),
@@ -33,7 +34,7 @@ RouteBase get $mainShellRouteData => StatefulShellRouteData.$route(
           routes: [
             GoRouteData.$route(
               path: '/about',
-              factory: $AboutPageRouteDataExtension._fromState,
+              factory: $AboutPageRouteExtension._fromState,
             ),
           ],
         ),
@@ -63,9 +64,8 @@ extension $HomePageRouteDataExtension on HomePageRouteData {
   void replace(BuildContext context) => context.replace(location);
 }
 
-extension $MapsPageRouteDataExtension on MapsPageRouteData {
-  static MapsPageRouteData _fromState(GoRouterState state) =>
-      const MapsPageRouteData();
+extension $MapsPageRouteExtension on MapsPageRoute {
+  static MapsPageRoute _fromState(GoRouterState state) => const MapsPageRoute();
 
   String get location => GoRouteData.$location(
         '/maps',
@@ -81,9 +81,9 @@ extension $MapsPageRouteDataExtension on MapsPageRouteData {
   void replace(BuildContext context) => context.replace(location);
 }
 
-extension $AboutPageRouteDataExtension on AboutPageRouteData {
-  static AboutPageRouteData _fromState(GoRouterState state) =>
-      const AboutPageRouteData();
+extension $AboutPageRouteExtension on AboutPageRoute {
+  static AboutPageRoute _fromState(GoRouterState state) =>
+      const AboutPageRoute();
 
   String get location => GoRouteData.$location(
         '/about',

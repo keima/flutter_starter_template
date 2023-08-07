@@ -2,11 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '/components/tab_navigation.dart';
-import 'home_branch.dart';
-import 'map_branch.dart';
-import 'about_branch.dart';
+import '/pages/maps/maps_page.dart';
+import '/pages/home/home_page.dart';
+import '/pages/about/about_page.dart';
 
 part 'routes.g.dart';
+part 'home_branch.dart';
+part 'map_branch.dart';
+part 'about_branch.dart';
 
 final _rootNavigatorKey = GlobalKey<NavigatorState>();
 
