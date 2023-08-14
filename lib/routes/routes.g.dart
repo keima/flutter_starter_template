@@ -17,8 +17,7 @@ RouteBase get $mainShellRouteData => StatefulShellRouteData.$route(
           routes: [
             GoRouteData.$route(
               path: '/home',
-              name: 'home',
-              factory: $HomePageRouteDataExtension._fromState,
+              factory: $HomePageRouteExtension._fromState,
             ),
           ],
         ),
@@ -46,9 +45,8 @@ extension $MainShellRouteDataExtension on MainShellRouteData {
       const MainShellRouteData();
 }
 
-extension $HomePageRouteDataExtension on HomePageRouteData {
-  static HomePageRouteData _fromState(GoRouterState state) =>
-      const HomePageRouteData();
+extension $HomePageRouteExtension on HomePageRoute {
+  static HomePageRoute _fromState(GoRouterState state) => const HomePageRoute();
 
   String get location => GoRouteData.$location(
         '/home',

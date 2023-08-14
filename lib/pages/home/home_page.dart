@@ -10,8 +10,8 @@ import '/i18n/translations.g.dart';
 import '/dart_define.gen.dart';
 import '/gen/assets.gen.dart';
 
-class HomePageRouteData extends GoRouteData {
-  const HomePageRouteData();
+class HomePageRoute extends GoRouteData {
+  const HomePageRoute();
 
   @override
   Page<void> buildPage(BuildContext context, GoRouterState state) {

@@ -40,7 +40,7 @@ class AboutPage extends HookConsumerWidget {
             ElevatedButton(
               child: const Text("go to /home"),
               onPressed: () {
-                const HomePageRouteData().go(context);
+                const HomePageRoute().go(context);
               },
             ),
             ElevatedButton(
