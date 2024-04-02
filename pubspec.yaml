@@ -22,10 +22,12 @@ dependencies:
   slang: ^3.18.0
   slang_flutter: ^3.18.0
 
+  # code utilities
+  flutter_hooks: ^0.20.0
+
   # riverpod
-  flutter_hooks: ^0.18.6
-  hooks_riverpod: ^2.3.6
-  riverpod_annotation: ^2.1.1
+  hooks_riverpod: ^2.5.0
+  riverpod_annotation: ^2.3.0
 
   # freezed
   freezed_annotation: ^2.2.0
@@ -37,16 +39,16 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  flutter_lints: ^3.0.0
   build_runner: ^2.4.5
 
   # localization
   slang_build_runner: ^3.18.0
 
   # riverpod
-  custom_lint: ^0.4.0
-  riverpod_generator: ^2.2.3
-  riverpod_lint: ^1.3.2
+  custom_lint: ^0.6.4
+  riverpod_generator: ^2.4.0
+  riverpod_lint: ^2.3.10
 
   # freezed
   json_serializable: ^6.7.0
@@ -59,7 +61,7 @@ dev_dependencies:
   flutter_gen_runner: ^5.3.1
 
   # env management
-  dart_define: ^2.0.1
+  dart_define: ^2.1.1
 
   # persistent storage
   shared_preferences: ^2.2.0
@@ -121,14 +123,14 @@ dart_define:
       description: Key2
       default: key2.fallback
       required: false
-    - name: FLAVOR
-      description: flavor
-      default: dev
-      required: false
-  flavors:
-    - name: prod
-      description: Production environment
-    - name: stg
-      description: Staging environment
-    - name: dev
-      description: Development environment
+    # - name: FLAVOR
+    #   description: flavor
+    #   default: dev
+    #   required: false
+  # flavors:
+  #   - name: prod
+  #     description: Production environment
+  #   - name: stg
+  #     description: Staging environment
+  #   - name: dev
+  #     description: Development environment
