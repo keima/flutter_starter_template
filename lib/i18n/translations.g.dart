@@ -1,8 +1,10 @@
 /// Generated file. Do not edit.
 ///
+/// Original: assets/i18n
+/// To regenerate, run: `dart run slang`
+///
 /// Locales: 2
 /// Strings: 10 (5 per locale)
-
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -24,8 +26,8 @@ const AppLocale _baseLocale = AppLocale.ja;
 /// - LocaleSettings.setLocale(AppLocale.ja) // set locale
 /// - Locale locale = AppLocale.ja.flutterLocale // get flutter locale from enum
 /// - if (LocaleSettings.currentLocale == AppLocale.ja) // locale check
-enum AppLocale with BaseAppLocale<AppLocale, TranslationsJa> {
-	ja(languageCode: 'ja', build: TranslationsJa.build),
+enum AppLocale with BaseAppLocale<AppLocale, Translations> {
+	ja(languageCode: 'ja', build: Translations.build),
 	en(languageCode: 'en', build: TranslationsEn.build);
 
 	const AppLocale({required this.languageCode, this.scriptCode, this.countryCode, required this.build}); // ignore: unused_element
@@ -33,10 +35,10 @@ enum AppLocale with BaseAppLocale<AppLocale, TranslationsJa> {
 	@override final String languageCode;
 	@override final String? scriptCode;
 	@override final String? countryCode;
-	@override final TranslationBuilder<AppLocale, TranslationsJa> build;
+	@override final TranslationBuilder<AppLocale, Translations> build;
 
 	/// Gets current instance managed by [LocaleSettings].
-	TranslationsJa get translations => LocaleSettings.instance.translationMap[this]!;
+	Translations get translations => LocaleSettings.instance.translationMap[this]!;
 }
 
 /// Method A: Simple
@@ -48,7 +50,7 @@ enum AppLocale with BaseAppLocale<AppLocale, TranslationsJa> {
 /// Usage:
 /// String a = t.someKey.anotherKey;
 /// String b = t['someKey.anotherKey']; // Only for edge cases!
-TranslationsJa get t => LocaleSettings.instance.currentTranslations;
+Translations get t => LocaleSettings.instance.currentTranslations;
 
 /// Method B: Advanced
 ///
@@ -65,17 +67,10 @@ TranslationsJa get t => LocaleSettings.instance.currentTranslations;
 /// final t = Translations.of(context); // Get t variable.
 /// String a = t.someKey.anotherKey; // Use t variable.
 /// String b = t['someKey.anotherKey']; // Only for edge cases!
-class Translations {
-	Translations._(); // no constructor
-
-	static TranslationsJa of(BuildContext context) => InheritedLocaleData.of<AppLocale, TranslationsJa>(context).translations;
-}
-
-/// The provider for method B
-class TranslationProvider extends BaseTranslationProvider<AppLocale, TranslationsJa> {
+class TranslationProvider extends BaseTranslationProvider<AppLocale, Translations> {
 	TranslationProvider({required super.child}) : super(settings: LocaleSettings.instance);
 
-	static InheritedLocaleData<AppLocale, TranslationsJa> of(BuildContext context) => InheritedLocaleData.of<AppLocale, TranslationsJa>(context);
+	static InheritedLocaleData<AppLocale, Translations> of(BuildContext context) => InheritedLocaleData.of<AppLocale, Translations>(context);
 }
 
 /// Method B shorthand via [BuildContext] extension method.
@@ -84,11 +79,11 @@ class TranslationProvider extends BaseTranslationProvider<AppLocale, Translation
 /// Usage (e.g. in a widget's build method):
 /// context.t.someKey.anotherKey
 extension BuildContextTranslationsExtension on BuildContext {
-	TranslationsJa get t => TranslationProvider.of(this).translations;
+	Translations get t => TranslationProvider.of(this).translations;
 }
 
 /// Manages all translation instances and the current locale
-class LocaleSettings extends BaseFlutterLocaleSettings<AppLocale, TranslationsJa> {
+class LocaleSettings extends BaseFlutterLocaleSettings<AppLocale, Translations> {
 	LocaleSettings._() : super(utils: AppLocaleUtils.instance);
 
 	static final instance = LocaleSettings._();
@@ -110,7 +105,7 @@ class LocaleSettings extends BaseFlutterLocaleSettings<AppLocale, TranslationsJa
 }
 
 /// Provides utility functions without any side effects.
-class AppLocaleUtils extends BaseAppLocaleUtils<AppLocale, TranslationsJa> {
+class AppLocaleUtils extends BaseAppLocaleUtils<AppLocale, Translations> {
 	AppLocaleUtils._() : super(baseLocale: _baseLocale, locales: AppLocale.values);
 
 	static final instance = AppLocaleUtils._();

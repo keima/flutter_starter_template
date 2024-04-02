@@ -2,45 +2,11 @@
 class DartDefine {
   DartDefine._();
   
-  /// The flavor the app was launched with
-  static Flavor get flavor => FlavorExtension.fromString(
-        const String.fromEnvironment('FLAVOR'),
-      );
-
   /// Key1
   static const key1 = String.fromEnvironment('KEY1');
 
   /// Key2
   static const key2 = String.fromEnvironment('KEY2');
-
-}
-
-/// The flavors supported by the application
-enum Flavor {
-  /// Production environment
-  prod,
-  
-  /// Staging environment
-  stg,
-  
-  /// Development environment
-  dev,
-  
-}
-
-extension FlavorExtension on Flavor {
-  static Flavor fromString(String value) {
-    switch (value) {
-      case 'prod':
-        return Flavor.prod;
-      case 'stg':
-        return Flavor.stg;
-      case 'dev':
-        return Flavor.dev;
-      default:
-        throw throw Exception('Invalid flavor');
-    }
-  }
 }
 
     
