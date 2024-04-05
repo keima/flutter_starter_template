@@ -6,15 +6,15 @@ init: dart-define-init force-build
 
 .PHONY: build
 build:
-	fvm flutter pub run build_runner build
+	fvm dart run build_runner build
 
 .PHONY: force-build
 force-build:
-	fvm flutter pub run build_runner build --delete-conflicting-outputs
+	fvm dart run build_runner build --delete-conflicting-outputs
 
 .PHONY: watch
 watch:
-	fvm flutter pub run build_runner watch
+	fvm dart run build_runner watch
 
 .PHONY: run-dev
 run-dev:
@@ -34,7 +34,7 @@ run-prod:
 
 .PHONY: gen-i18n
 gen-i18n:
-	fvm flutter pub run slang
+	fvm dart run slang
 
 .PHONY: dart-define-init
 dart-define-init:
