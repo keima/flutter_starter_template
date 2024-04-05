@@ -62,6 +62,7 @@ android {
         versionName flutterVersionName
 
         resValue "string", "app_name", "${dartDefines.appName}"
+        resValue "string", "dartFlavor", "${dartDefines.FLAVOR}"
         // other defines goes here...
     }
 
