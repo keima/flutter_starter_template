@@ -115,22 +115,26 @@ flutter_gen:
 dart_define:
   json: false
   variables:
-    - name: KEY1
-      description: Key1
-      default: key1.fallback
+    - name: appId
+      description: appId
+      default: "com.example.flutter_starter_template"
       required: false
-    - name: KEY2
-      description: Key2
-      default: key2.fallback
+    - name: appIdSuffix
+      description: appIdSuffix
+      required: true
+    - name: key1
+      description: key1
+      default: "[key1]fallback"
       required: false
-    # - name: FLAVOR
-    #   description: flavor
-    #   default: dev
-    #   required: false
-  # flavors:
-  #   - name: prod
-  #     description: Production environment
-  #   - name: stg
-  #     description: Staging environment
-  #   - name: dev
-  #     description: Development environment
+    - name: key2
+      description: key2
+      default: "[key2]fallback"
+      required: false
+    # NOTE: FLAVOR reserved
+  flavors:
+    - name: prod
+      description: Production environment
+    - name: stg
+      description: Staging environment
+    - name: dev
+      description: Development environment

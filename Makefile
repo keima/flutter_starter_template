@@ -18,15 +18,15 @@ watch:
 
 .PHONY: run-dev
 run-dev:
-	fvm flutter run --flavor dev --dart-define-from-file=env.dev.json
+	fvm flutter run --dart-define-from-file=env.dev.json
 
 .PHONY: run-stg
 run-stg:
-	fvm flutter run --flavor stg --dart-define-from-file=env.stg.json
+	fvm flutter run --dart-define-from-file=env.stg.json
 
 .PHONY: run-prod
 run-prod:
-	fvm flutter run --flavor prod --dart-define-from-file=env.prod.json
+	fvm flutter run --dart-define-from-file=env.prod.json
 
 # .PHONY: build-aab
 # build-aab:
@@ -38,7 +38,9 @@ gen-i18n:
 
 .PHONY: dart-define-init
 dart-define-init:
-	fvm flutter pub run dart_define generate --no-json
+	fvm dart run dart_define generate --no-json --json_path=env.dev.json
+
+# ↓ makefile検証用
 
 .PHONY: foobar
 foobar: foo bar baz
