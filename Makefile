@@ -28,9 +28,13 @@ run-stg:
 run-prod:
 	fvm flutter run --dart-define-from-file=env.prod.json
 
+.PHONY: build-apk-dev
+build-apk-dev:
+	fvm flutter build apk --debug --dart-define-from-file=env.dev.json --build-number=${BUILD_NUMBER}
+
 # .PHONY: build-aab
 # build-aab:
-# 	fvm flutter build appbundle --debug --flavor prod --dart-define-from-file=env.prod.json --build-number=${BUILD_NUMBER}
+# 	fvm flutter build appbundle --release --dart-define-from-file=env.prod.json --build-number=${BUILD_NUMBER}
 
 .PHONY: gen-i18n
 gen-i18n:
