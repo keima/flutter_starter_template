@@ -21,11 +21,11 @@ class MapsPage extends HookConsumerWidget {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: const Text("Maps"),
       ),
-      body: Center(
+      body: const Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text("maps_page"),
+            Text("maps_page"),
           ],
         ),
       ),
