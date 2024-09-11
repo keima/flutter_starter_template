@@ -19,7 +19,9 @@ mixin _$Task {
   String? get title => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Task
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TaskCopyWith<Task> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -41,6 +43,8 @@ class _$TaskCopyWithImpl<$Res, $Val extends Task>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Task
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -77,6 +81,8 @@ class __$$TaskImplCopyWithImpl<$Res>
   __$$TaskImplCopyWithImpl(_$TaskImpl _value, $Res Function(_$TaskImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Task
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -124,7 +130,9 @@ class _$TaskImpl implements _Task {
   @override
   int get hashCode => Object.hash(runtimeType, title, description);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Task
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TaskImplCopyWith<_$TaskImpl> get copyWith =>
@@ -139,8 +147,11 @@ abstract class _Task implements Task {
   String? get title;
   @override
   String? get description;
+
+  /// Create a copy of Task
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TaskImplCopyWith<_$TaskImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
